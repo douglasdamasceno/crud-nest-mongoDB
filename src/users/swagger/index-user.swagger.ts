@@ -1,4 +1,4 @@
 import { OmitType } from '@nestjs/swagger';
-import { User } from '../entities/user.entity';
+import { UserEntity } from '../entities/user.entity';
 
-export class IndexUserSwagger extends OmitType(User, ['createAt']) {}
+export class IndexUserSwagger extends OmitType(UserEntity, ['createAt']) {}

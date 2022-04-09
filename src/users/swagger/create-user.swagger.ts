@@ -1,3 +1,3 @@
-import { User } from '../entities/user.entity';
+import { UserEntity } from '../entities/user.entity';
 
-export class CreateUserSwagger extends User {}
+export class CreateUserSwagger extends UserEntity {}

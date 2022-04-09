@@ -10,11 +10,12 @@ async function bootstrap() {
 		.setTitle('User App API')
 		.setDescription('The User API description')
 		.setVersion('1.0')
-		// .addTag('user')
 		.build();
 	const document = SwaggerModule.createDocument(app, config);
 	SwaggerModule.setup('api', app, document);
-	app.useGlobalPipes(new ValidationPipe());
+	app.useGlobalPipes(
+		new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }),
+	);
 	await app.listen(process.env.PORT);
 }
 
