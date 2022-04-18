@@ -1,5 +1,4 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { async } from 'rxjs';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UserEntity } from './entities/user.entity';
 import { UsersController } from './users.controller';
